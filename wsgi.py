@@ -7,11 +7,11 @@ all_data=[]
 @application.route("/", methods=['GET', 'POST'])
 def hello():
     if request.method == 'GET':
-      return json.dumps(all_data)
+      return str(json.dumps(all_data))
     else:
       data = request.data
       all_data.append(data)
-      return json.dumps(all_data)
+      return str(json.dumps(all_data))
 
 if __name__ == "__main__":
     application.run()
