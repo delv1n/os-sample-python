@@ -10,6 +10,7 @@ def hello():
       return str(json.dumps(str(all_data)))
     else:
       data = request.data
+      print(data)
       all_data.append(data)
       return str(json.dumps(str(all_data)))
 
