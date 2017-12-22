@@ -9,7 +9,8 @@ def hello():
     if request.method == 'GET':
       return json.dumps(all_data)
     else:
-      data = request.json
+      data = request.data
+      print request.data
       all_data.append(data)
       return json.dumps(all_data)
 
